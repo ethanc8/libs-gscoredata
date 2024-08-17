@@ -84,6 +84,7 @@
 - (BOOL) writeSavingObjects: (NSSet *) objectsToWrite
 			deletingObjects: (NSSet *) objectIDsToDelete
                       error: (NSError **) error;
+- (unsigned long long) nextFreeIDValue;
 @end
 
 #endif // _GSPersistentStore_h_

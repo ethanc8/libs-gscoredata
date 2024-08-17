@@ -70,7 +70,7 @@ GenerateNewRandomUUID (void)
     {
       long int result;
       lrand48_r (&randomizerSetup, &result);
-      hexaValue = [NSString stringWithFormat: @"%@%X", hexaValue, result];
+      hexaValue = [NSString stringWithFormat: @"%@%llX", hexaValue, (long long)result];
     }
 
   [randomizerLock unlock];
@@ -410,6 +410,14 @@ GenerateNewRandomUUID (void)
   SUBCLASS_OVERRIDE_ERROR;
 
   return NO;
+}
+
+- (unsigned long long) nextFreeIDValue
+{
+  [[NSException exceptionWithName: NSInvalidArgumentException
+                           reason: @"-[GSPersistentStore nextFreeIDValue] is unimplemented"
+                         userInfo: nil] raise];
+  return 0;
 }
 
 @end

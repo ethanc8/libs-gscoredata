@@ -39,6 +39,7 @@
 
 #import <CoreData/CoreData.h>
 #import "CoreDataUtilities.h"
+#import "GSPersistentStore.h"
 
 @interface NSAttributeDescription (GSCoreDataPrivate)
 

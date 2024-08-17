@@ -1,0 +1,5 @@
+**/.cache
+**/*.framework
+**/derived_src
+**/obj
+**/compile_commands.json
